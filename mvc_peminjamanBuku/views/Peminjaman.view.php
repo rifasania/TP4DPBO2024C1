@@ -7,11 +7,8 @@
       $dataMembers = null;
       $dataBuku = null;
       foreach($data['peminjaman'] as $val){
-        // list($id, $nama, $status) = $val;
         list($peminjaman_id, $waktu_peminjaman, $status_pengembalian, $waktu_pengembalian, $members_id, $buku_id) = $val;
-        
-        // echo "ID Peminjaman: $peminjaman_id, Nama Member: $nama_member, ...";
-        
+                
         if ($status_pengembalian == 'Sudah Dikembalikan') {
           $dataPinjam .= "<tr>
                   <td>" . $no++ . "</td>
